@@ -8,7 +8,7 @@ class BooksController < ApplicationController
       if @book.save
        # 4. トップ画面へリダイレクト
         flash[:notice] = "Book was successfully created."
-        redirect_to books_path(@book.id)
+        redirect_to book_path(@book.id)
 
       else
         # renderでコントローラを経由せずshow.html.erbに行くため@booksを定義

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  # topを初期画面にする。
+  root to: "homes#top"
+
   resources :books, except:[:new]
   # resoucesで省略
     # get 'books'     => 'books#index'
@@ -9,6 +12,6 @@ Rails.application.routes.draw do
     # get 'books/:id/edit' => 'books#edit'
     # patch 'books/:id'  => 'books#update'
     # delete 'books/:id' => 'books#destroy'
-  get '/' => "homes#top"
+  # get '/' => "homes#top", as :"root"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
